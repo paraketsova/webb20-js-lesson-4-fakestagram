@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Comments from './Comments';
 
 export default function ImageItem({imageItem}) {
   const [likes, setLikes] = useState(imageItem.likes)
@@ -8,7 +9,7 @@ export default function ImageItem({imageItem}) {
   }
 
   return (
-    <div className="col-md-6">
+    <div className="col-md-5">
       <img
         onClick={handleOnClick} 
         className="img-fluid" 
@@ -22,6 +23,7 @@ export default function ImageItem({imageItem}) {
       <p onClick={handleOnClick} >
         ♥︎ {likes}
       </p>
+      <Comments />
     </div>
   )
 }
