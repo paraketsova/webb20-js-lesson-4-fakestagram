@@ -5,7 +5,11 @@ import ImageItem from '../components/ImageItem'
 export default function ImageListPage() {
   const [imageList, setImageList] = useState([]);
 
-  function handleOnClick() {}
+  function handleOnClick() {
+    fetch('https://image-mock-data.firebaseio.com/image.json')
+    .then( response => console.log(response) )
+    .then ( data => console.log(data) )
+  }
   
   console.log(imageList)
   return (
