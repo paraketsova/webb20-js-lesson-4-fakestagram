@@ -5,6 +5,8 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import ImageListPage from './pages/ImageListPage';
+import ImageDetailPage from './pages/ImageDetailPage';
+
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       </div>
       
       <Switch>
+
+        <Route path="/instagram/:id" component={ImageDetailPage} />
 
         <Route path="/instagram">
           <ImageListPage />
